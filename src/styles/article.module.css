@@ -1,0 +1,107 @@
+.main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex: 1;
+}
+
+.section {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-content: center;
+  width: 1200px;
+}
+
+.backDiv {
+  position: relative;
+  display: flex;
+  padding-top: 80px;
+}
+
+.backDiv p {
+  padding-left: 10px;
+}
+
+.backDiv button {
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+.paragraphFlex {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  width: 1200px;
+}
+
+.paragraph {
+  padding-top: 80px;
+  font-size: 38px;
+  text-align: justify;
+}
+
+.finalParagraph {
+  text-align: justify;
+  display: flex;
+  padding-top: 80px;
+}
+
+.finalParagraph p {
+  font-size: 24px;
+  margin-left: 120px;
+  margin-right: 120px;
+  transform: scale(1);
+  transition: all 1s ease;
+}
+
+.highLightedParagraph {
+  text-align: justify;
+  display: flex;
+  padding-top: 80px;
+}
+
+.highLightedParagraph p {
+  font-size: 24px;
+  margin-left: 120px;
+  margin-right: 120px;
+}
+
+.highLightedParagraph:hover {
+  color: #ff4949;
+  transform: scale(1.01);
+  transition: all 1s ease;
+  -webkit-transition: all 1s ease;
+  -moz-transition: all 1s ease;
+  -ms-transition: all 1s ease;
+  -o-transition: all 1s ease;
+  -webkit-transform: scale(1.01);
+  -moz-transform: scale(1.01);
+  -ms-transform: scale(1.01);
+  -o-transform: scale(1.01);
+}
+
+@media (max-width: 1200px) {
+  .section {
+    width: 100%;
+  }
+
+  .paragraphFlex {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    width: 100%;
+  }
+
+  .paragraphFlex p {
+    margin-left: 20px;
+    margin-right: 20px;
+  }
+  
+  .backDiv {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+}
