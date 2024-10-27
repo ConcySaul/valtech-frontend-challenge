@@ -44,10 +44,10 @@ export default function Cards({ cards }: CardsProp) {
                 href={card.cta?.url || '/'}
                 target={card.cta?.target || '_self'}
               >
-                <button className={styles.actionButton}>Explore More</button>
+                <button className={styles.actionButton} aria-label={card.cta?.ariaLabel}>Explore More</button>
               </Link>
             ) : (
-              <button className={styles.actionButton}>Explore More</button>
+              <button className={styles.actionButton} aria-label={card.cta?.ariaLabel}>Explore More</button>
             )}
             <img
               src={card.backgroundAsset.url}
@@ -89,10 +89,10 @@ export default function Cards({ cards }: CardsProp) {
                 href={card.cta?.url || '/'}
                 target={card.cta?.target || '_self'}
               >
-                <button className={styles.actionButton}>Explore More</button>
+                <button className={styles.actionButton} aria-label={card.cta?.ariaLabel}>Explore More</button>
               </Link>
             ) : (
-              <button className={styles.actionButton}>Explore More</button>
+              <button className={styles.actionButton} aria-label={card.cta?.ariaLabel}>Explore More</button>
             )}
           </div>
         ))}
