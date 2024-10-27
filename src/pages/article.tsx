@@ -22,7 +22,6 @@ export default function Article({
   return (
     <>
       <Header />
-      <main className={styles.main}>
         <section className={styles.section}>
           <div className={styles.backDiv}>
             <button>
@@ -49,7 +48,6 @@ export default function Article({
             </div>
           </div>
         </section>
-      </main>
       <Footer footer={footer} />
     </>
   );

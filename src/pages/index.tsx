@@ -18,7 +18,6 @@ export default function Index({
   return (
     <>
       <Header />
-      <main className={styles.main}>
         <section className={styles.section}>
           <Banner banner={banner} />
         </section>
@@ -27,7 +26,6 @@ export default function Index({
           <h2 className={styles.cardTitle}>{cards.title}</h2>
           <Cards cards={cards} />
         </section>
-      </main>
       <Footer footer={footer} />
     </>
   );

@@ -13,9 +13,9 @@ function MyApp({ Component, pageProps }: AppProps) {
         <meta name="description" content="Valtech react front challenge" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
       </Head>
-      <div className={inter.className}>
+      <main className={inter.className}>
         <Component {...pageProps} />
-      </div>
+      </main>
     </>
   );
 }
