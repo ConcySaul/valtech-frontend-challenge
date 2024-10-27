@@ -4,21 +4,37 @@ import Index from '@/pages/index';
 import { Footer } from '@/types/footer';
 import { HomeBanner, CardsProp, Banner, Cards } from '@/types';
 
-jest.mock('@/components/Header/Header', () => () => <header>Header</header>);
-jest.mock('@/components/Footer/Footer', () => () => <footer>Footer</footer>);
-jest.mock('@/components/Banner/Banner', () => ({ banner }: HomeBanner) => (
-  <>
-    {' '}
-    <div>{banner.title}</div> <div>{banner.description}</div>{' '}
-  </>
-));
-jest.mock('@/components/Cards/Cards', () => ({ cards }: CardsProp) => (
-  <>
-    {' '}
-    <div>{cards.cards[0].title}</div> <div>{cards.cards[0].subtitle}</div>{' '}
-    <div>{cards.cards[0].description}</div>
-  </>
-));
+jest.mock('@/components/Header/Header', () => {
+  const MockedHeader = () => <header>Header</header>;
+  MockedHeader.displayName = 'Header';
+  return MockedHeader;
+});
+jest.mock('@/components/Footer/Footer', () => {
+  const MockedFooter = () => <footer>Footer</footer>;
+  MockedFooter.displayName = 'Footer';
+  return MockedFooter;
+});
+jest.mock('@/components/Banner/Banner', () => {
+  const MockedBanner = ({ banner }: HomeBanner) => (
+    <>
+      <div>{banner.title}</div>
+      <div>{banner.description}</div>
+    </>
+  );
+  MockedBanner.displayName = 'Banner';
+  return MockedBanner;
+});
+jest.mock('@/components/Cards/Cards', () => {
+  const MockedCards = ({ cards }: CardsProp) => (
+    <>
+      <div>{cards.cards[0].title}</div>
+      <div>{cards.cards[0].subtitle}</div>
+      <div>{cards.cards[0].description}</div>
+    </>
+  );
+  MockedCards.displayName = 'Cards';
+  return MockedCards;
+});
 
 describe('Home Page', () => {
   const mockFooter: Footer = {
