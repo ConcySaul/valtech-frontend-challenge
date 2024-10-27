@@ -90,4 +90,12 @@
     padding-right: unset;
     padding-bottom: unset;
   }
+
+  .rightArrow {
+    z-index: 1;
+  }
+  
+  .leftArrow {
+    z-index: 1;
+  }
 }
