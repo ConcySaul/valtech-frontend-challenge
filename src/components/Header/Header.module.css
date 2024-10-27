@@ -1,0 +1,23 @@
+.header {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  height: 100px;
+  background-color: #ff4949;
+}
+
+.logoContainer img {
+  width: 181px;
+  height: 40px;
+  margin-left: 120px;
+}
+
+@media (max-width: 1200px) {
+  .header {
+    justify-content: center;
+  }
+
+  .logoContainer img {
+    margin-left: unset;
+  }
+}
